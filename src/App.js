@@ -1,8 +1,6 @@
 import {useState} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Select from './components/Select';
-import Input from './components/Input';
 import Meme from './components/Meme';
 import Form from './components/Form';
 
