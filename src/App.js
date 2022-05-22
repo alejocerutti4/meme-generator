@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Select from './components/Select';
 import Input from './components/Input';
 import Meme from './components/Meme';
+import Form from './components/Form';
 
 
 function App() {
@@ -15,16 +16,7 @@ function App() {
   return (
     <div className="App container">
       <h1>Meme Generator</h1>
-      <div className="row d-flex justify-content-center mt-3 mb-3 me-2">
-        <Select setSelectedValue={setSelectedValue}/>
-      </div>
-      <div className="row d-flex justify-content-center input-group mb-3">
-        <Input setLinea={setLinea1} placeholder="Insertar texto arriba..."/>
-      </div>
-      <div className="row d-flex justify-content-center input-group mb-3">
-        <Input setLinea={setLinea2} placeholder="Insertar texto abajo..."/>
-
-      </div>
+      <Form setSelectedValue={setSelectedValue} setLinea1={setLinea1} setLinea2={setLinea2}></Form>
       <button onClick={() => setExportar(true)} className="btn btn-primary btn-lg mb-2">Export</button><br/>
       <Meme linea1={linea1} linea2={linea2} imagen={selectedValue} exportar={exportar} setExportar={setExportar}/>  
       
